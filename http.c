@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){
         CkHttpRequest_putHttpVerb(req,"GET");
         //CkHttpRequest_putPath(req, "/");
         //
-        resp = CkHttp_SynchronousRequest(http,"ifconfig.me",80,0,req);
+        resp = CkHttp_SynchronousRequest(http,"ifconfig.me",443,1,req);
         //printf("%d\n",CkHttp_getLastMethodSuccess(http));
         if(CkHttp_getLastMethodSuccess(http)!=1){
                 printf("Error!\n");
