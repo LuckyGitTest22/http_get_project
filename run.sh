@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z $1 ] || [ ! -z $2 ]
+if [ -z $1 ] || [ ! -z $3 ]
 then
 	echo "Error!"
 	exit
@@ -10,5 +10,5 @@ then
 	exit
 fi
 gcc $1.c -lchilkat -ldl -o $1 &&
-./$1 &&
+./$1 $2 &&
 rm ./$1
